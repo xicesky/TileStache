@@ -12,3 +12,5 @@ TileStache-*.*.tar.gz
 *.shx
 .coverage
 .idea/
+venv
+
