@@ -42,7 +42,7 @@ class PostGISVectorTestBase(object):
     '''
 
     def initTestTable(self, testTableName):
-        self.conn = ogr.Open("PG: dbname='test_tilestache' user='postgres'")
+        self.conn = ogr.Open("PG: dbname='test_tilestache'")
         self.testTableName = testTableName
         
         self.cleanTestTable()
@@ -88,8 +88,6 @@ class VectorProviderTest(PostGISVectorTestBase, TestCase):
                          "clip": false,
                          "dbinfo":
                          {
-                             "user": "postgres",
-                             "password": "",
                              "database": "test_tilestache"
                          },
                          "queries":
@@ -108,8 +106,6 @@ class VectorProviderTest(PostGISVectorTestBase, TestCase):
                      {
                          "dbinfo":
                          {
-                             "user": "postgres",
-                             "password": "",
                              "database": "test_tilestache"
                          },
                          "queries":
